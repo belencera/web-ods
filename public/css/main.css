@@ -12,6 +12,7 @@
   --info-color: #17a2b8;
   --light-color: #f8f9fa;
   --dark-color: #343a40;
+  --text-color: #a7a7a7;
   
   --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
   --font-size-base: 16px;
@@ -33,8 +34,8 @@ body {
   font-family: var(--font-family);
   font-size: var(--font-size-base);
   line-height: var(--line-height-base);
-  color: var(--dark-color);
-  background-color: #fff;
+  color: var(--text-color);
+  background-color: #000000;
 }
 
 /* Utilidades comunes */
@@ -46,6 +47,7 @@ body {
 }
 
 /* Importar componentes y utilidades */
+@import url('./components/navigation.css');
 @import url('./components/buttons.css');
 @import url('./components/cards.css');
 @import url('./utilities/spacing.css');

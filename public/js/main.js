@@ -18,9 +18,8 @@ document.addEventListener('DOMContentLoaded', () => {
  * Inicializa los componentes de la aplicación
  */
 function initComponents() {
-  // Aquí cargarás tus componentes
-  // Ejemplo: initNavigation();
-  // Ejemplo: initForms();
+  // Inicializar navegación
+  initNavigation();
 }
 
 /**

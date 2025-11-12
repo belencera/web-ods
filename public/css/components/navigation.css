@@ -1,0 +1,99 @@
+/* ==================== HEADER ==================== */
+
+#main-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 100%;
+  position: sticky;
+  z-index: 10;
+  top: 0;
+  left: 0;
+}
+
+.header-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding: 10px 20px;
+  width: max-content;
+}
+
+.header-logo img {
+  height: 50px;
+}
+
+/* -------- Menú header -------- */
+#main-navbar nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+#main-navbar nav ul li {
+  position: relative;
+}
+
+#main-navbar nav ul li+li::before {
+  content: "|";
+  color: var(--text-color);
+  position: absolute;
+  left: -15px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#main-navbar nav ul li a {
+  text-decoration: none;
+  font-size: clamp(0.9rem, 1.2vw, 1.1rem);
+  color: var(--text-color);
+  font-weight: 400;
+  padding: 15px 20px;
+  border-radius: 15px;
+  transition: color 0.5s ease, background 0.5s ease;
+}
+
+#main-navbar nav ul li a:hover {
+  color: #007aff;
+  background: rgba(255, 255, 255, 0.109);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+}
+
+/* Espaciado para el contenido (evitar que quede debajo del navbar fijo) */
+body {
+  padding-top: 0;
+}
+
+/* Responsive - Móvil */
+@media (max-width: 768px) {
+  #main-navbar {
+    padding: 5px;
+  }
+
+  .header-menu {
+    flex-direction: column;
+    padding: 10px 15px;
+    gap: 10px;
+  }
+
+  #main-navbar nav ul {
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  #main-navbar nav ul li a {
+    font-size: 0.9rem;
+    padding: 10px 15px;
+  }
+
+  .header-logo img {
+    height: 40px;
+  }
+}
+
