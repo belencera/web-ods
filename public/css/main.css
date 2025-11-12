@@ -48,6 +48,7 @@ body {
 
 /* Importar componentes y utilidades */
 @import url('./components/navigation.css');
+@import url('./components/footer.css');
 @import url('./components/buttons.css');
 @import url('./components/cards.css');
 @import url('./utilities/spacing.css');

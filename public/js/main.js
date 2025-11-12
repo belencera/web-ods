@@ -20,6 +20,8 @@ document.addEventListener('DOMContentLoaded', () => {
 function initComponents() {
   // Inicializar navegación
   initNavigation();
+  // Inicializar footer
+  initFooter();
 }
 
 /**
