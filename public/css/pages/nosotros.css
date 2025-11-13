@@ -1,0 +1,132 @@
+/* --- ESTILOS DEL H2 (Secciones) --- */
+.team-section h2,
+.contact-section h2 {
+    font-size: clamp(2rem, 3vw, 2.5rem);
+    font-weight: 600;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+
+/* ==================== SECCIÓN 1: PORTADA E HISTORIA ==================== */
+
+.history-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    max-width: 100%;
+    margin-bottom: 40px;
+}
+
+.history-image {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 70px;
+    object-fit: cover;
+
+    /* máscara para difuminar los bordes izquierdo y derecho */
+
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+    mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+}
+
+.history-text {
+    width: 40%;
+    padding: 20px 0;
+}
+
+.history-text p {
+    line-height: 1.7;
+    margin-bottom: 1.2rem;
+    font-size: clamp(1rem, 1.2vw, 1.1rem);
+    color: var(--text-color);
+}
+
+/* ==================== SECCIÓN 2: EQUIPO ==================== */
+
+.team-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 0 10px;
+}
+
+.team-card {
+    padding: 20px;
+    max-width: 350px;
+    width: 100%;
+    text-align: center;
+}
+
+
+.team-img {
+    aspect-ratio: 1 / 1;
+    width: clamp(140px, 20vw, 160px);
+    height: auto;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 25px;
+    border: 2px solid var(--primary-color);
+    padding: 5px;
+}
+
+.team-card h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--light-color);
+    margin-bottom: 0.3rem;
+}
+
+.team-card h4 {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.team-card p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+
+/* ==================== MEDIA QUERIES (Móvil) ==================== */
+
+@media (max-width: 768px) {
+
+    .history-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .history-image {
+        width: 80%;
+        max-height: 280px;
+    }
+
+    .history-text {
+        width: 90%;
+        text-align: justify;
+        padding: 0 20px;
+    }
+
+    .team-container {
+        gap: 20px;
+    }
+
+    .team-card {
+        max-width: 90%;
+    }
+
+    .team-section h2,
+    .contact-section h2 {
+        margin-top: 40px;
+        margin-bottom: 25px;
+    }
+}
