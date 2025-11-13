@@ -1,0 +1,175 @@
+/* Título de la sección del formulario (H2) */
+main h2 {
+    font-size: clamp(1.8rem, 2.5vw, 2.3rem);
+    font-weight: 600;
+    text-align: center;
+    color: var(--text-color);
+    margin-top: 60px;
+    margin-bottom: 40px;
+}
+
+/* ==================== SECCIÓN 1: CONTACT CARDS (WhatsApp, Teléfono, Mail) ==================== */
+
+/* Contenedor de tarjetas de contacto */
+.contact-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 60px;
+    margin-bottom: 30px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Tarjeta de contacto */
+.contact-card {
+    padding: 20px;
+    max-width: 300px;
+    width: 100%;
+    min-height: 200px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Títulos de las tarjetas de contacto */
+.contact-card h3 {
+    font-size: 1.5rem;
+    font-weight: 350;
+    margin-bottom: 35px;
+}
+
+/* Enlaces dentro de las tarjetas de contacto */
+.contact-card a {
+    padding: 15px 50px;
+    border-radius: 30px;
+    background: var(--super-light-color);
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+    border: 2px solid transparent;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+/* Colores específicos para cada tipo de contacto */
+.contact-card.whatsapp a {
+    color: #25D366;
+}
+
+.contact-card.phone a {
+    color: #006aff;
+}
+
+.contact-card.mail a {
+    color: #f38d5d;
+}
+
+/* Hover General */
+.contact-card a:hover {
+    transform: scale(1.05);
+}
+
+/* Hover Específico */
+.contact-card.whatsapp a:hover {
+    box-shadow: 0 0 20px rgba(37, 211, 102, 0.2);
+    border-color: rgba(37, 211, 102, 0.5);
+}
+
+.contact-card.phone a:hover {
+    box-shadow: 0 0 20px rgba(0, 123, 255, 0.2);
+    border-color: rgba(0, 123, 255, 0.5);
+}
+
+.contact-card.mail a:hover {
+    box-shadow: 0 0 20px rgba(243, 141, 93, 0.2);
+    border-color: rgba(243, 141, 93, 0.5);
+}
+
+
+/* ==================== SECCIÓN 2: FORMULARIO DE CONTACTO ==================== */
+
+/* Contenedor del formulario */
+.contact-form {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px 40px;
+    background: var(--super-light-color);
+    border-radius: 12px;
+    backdrop-filter: blur(2px);
+}
+
+/* Formulario e inputs */
+#contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Etiquetas (Labels) */
+#contactForm label {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+
+/* Estilos de Campos de Texto y Área de Texto */
+#contactForm input[type="text"],
+#contactForm input[type="email"],
+#contactForm input[type="tel"],
+#contactForm textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    font-size: 1rem;
+}
+
+#contactForm textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+/* Foco de los campos (Focus) */
+#contactForm input:focus,
+#contactForm textarea:focus {
+    outline: none;
+    box-shadow: 0 0 5px var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+/* Estilo del botón Enviar */
+.btn-form {
+    width: 200px;
+    align-self: center;
+    margin: 15px 0 10px 0;
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    transition: transform 0.3s ease;
+}
+
+.btn-form:hover {
+    transform: scale(1.05);
+}
+
+/* ==================== MEDIA QUERIES (Ajuste Móvil) ==================== */
+@media (max-width: 768px) {
+
+    .contact-row {
+        gap: 20px;
+    }
+
+    .contact-card {
+        max-width: 200px;
+    }
+
+    .contact-form {
+        margin: 0 20px;
+        padding: 20px;
+    }
+}
