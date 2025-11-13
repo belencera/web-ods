@@ -41,6 +41,7 @@ function initFooter() {
             <h4>Contacto</h4>
             <p><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="m20 8l-8 5l-8-5V6l8 5l8-5m0-2H4c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2"/></svg>administracion@ondemand.com.ar</p>
             <p><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="m20.487 17.14l-4.065-3.696a1 1 0 0 0-1.391.043l-2.393 2.461c-.576-.11-1.734-.471-2.926-1.66c-1.192-1.193-1.553-2.354-1.66-2.926l2.459-2.394a1 1 0 0 0 .043-1.391L6.859 3.513a1 1 0 0 0-1.391-.087l-2.17 1.861a1 1 0 0 0-.29.649c-.015.25-.301 6.172 4.291 10.766C11.305 20.707 16.323 21 17.705 21c.202 0 .326-.006.359-.008a1 1 0 0 0 .648-.291l1.86-2.171a.997.997 0 0 0-.085-1.39"/></svg>+34 641 099 875</p>
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2C7.589 2 4 5.589 4 9.995C3.971 16.44 11.696 21.784 12 22c0 0 8.029-5.56 8-12c0-4.411-3.589-8-8-8m0 12c-2.21 0-4-1.79-4-4s1.79-4 4-4s4 1.79 4 4s-1.79 4-4 4"/></svg>Málaga, España</p>
           </div>
         </div>
         
@@ -49,7 +50,7 @@ function initFooter() {
           <div class="footer-legal">
             <a href="${basePath}pages/aviso-legal.html">Aviso Legal</a>
             <span>|</span>
-            <a href="${basePath}pages/politica-cookies.html">Política de Cookies</a>
+            <a href="${basePath}pages/politica-cookies.html">Política Privacidad y Cookies</a>
             <span>|</span>
             <a href="${basePath}pages/terminos-condiciones.html">Términos y Condiciones</a>
           </div>

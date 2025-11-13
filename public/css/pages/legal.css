@@ -1,0 +1,36 @@
+/* ============================================
+   Estilos específicos para páginas legales 
+   (Aviso Legal, Cookies, T&C)
+   ============================================ */
+
+
+/* Encabezado Principal */
+header h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding-bottom: 0.5rem;
+    text-align: center;
+}
+
+/* Contenido de la Sección (main) */
+main {
+    line-height: 1.7; 
+}
+
+main h2 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+main p {
+    margin-bottom: 1.5rem; 
+    text-align: justify; 
+}
+
+main section {
+    margin-bottom: 30px;
+}

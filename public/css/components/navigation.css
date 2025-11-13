@@ -40,7 +40,7 @@
 
 #main-navbar nav ul li+li::before {
   content: "|";
-  color: var(--text-color);
+  color: var(--super-light-color);
   position: absolute;
   left: -15px;
   top: 50%;
@@ -74,6 +74,10 @@ body {
 @media (max-width: 768px) {
   #main-navbar {
     padding: 5px;
+  }
+
+  #main-navbar nav ul li+li::before {
+    content: none;
   }
 
   .header-menu {
