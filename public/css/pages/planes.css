@@ -81,23 +81,26 @@
     padding: 0.1rem 0;
 }
 
-/* Borde específico para cada servicio */
+/* Estilo específico para cada servicio */ 
+
 .plan.starter {
+    border-color: var(--plan-starter-color);
     box-shadow: 0 0 10px var(--plan-starter-color);
 }
 
 .plan.growth {
+    border-color: var(--plan-growth-color);
     box-shadow: 0 0 10px var(--plan-growth-color);
 }
 
 .plan.scale {
+    border-color: var(--plan-scale-color);
     box-shadow: 0 0 10px var(--plan-scale-color);
 }
 
 .plan.equity {
     border: var(--plan-equity-color) solid 2px;
-    box-shadow: 0 0 10px var(--plan-equity-color);
-}
+    box-shadow: 0 0 10px var(--plan-equity-color);}
 
 /* Hover general y específico de cada servicio */
 .plan:hover {
@@ -106,22 +109,22 @@
 
 .plan.starter:hover {
     border-color: var(--plan-starter-color);
-    box-shadow: 0 0 30px var(--plan-starter-color)
+    box-shadow: 0 0 20px var(--plan-starter-color)
 }
 
 .plan.growth:hover {
     border-color: var(--plan-growth-color);
-    box-shadow: 0 0 30px var(--plan-growth-color)
+    box-shadow: 0 0 20px var(--plan-growth-color)
 }
 
 .plan.scale:hover {
     border-color: var(--plan-scale-color);
-    box-shadow: 0 0 30px var(--plan-scale-color)
+    box-shadow: 0 0 20px var(--plan-scale-color)
 }
 
 .plan.equity:hover {
     border-color: var(--plan-equity-color);
-    box-shadow: 0 0 30px var(--plan-equity-color)
+    box-shadow: 0 0 20px var(--plan-equity-color)
 }
 
 

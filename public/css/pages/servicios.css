@@ -1,10 +1,9 @@
-
 /* ==================== SECCIÓN WORSPACE ==================== */
 
-.workspace-container {    
+.workspace-container {
     display: grid;
-    grid-template-columns: minmax(0, 3fr) minmax(0, 5fr); 
-    gap: 40px; 
+    grid-template-columns: minmax(0, 3fr) minmax(0, 5fr);
+    gap: 40px;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
@@ -18,8 +17,6 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.workspace-card.plan.base {border-color: var(--plan-base-color);}
-.workspace-card.plan.advanced {border-color: var(--plan-advanced-color);}
 
 /* Tarjetas de Demo */
 .workspace-card.demo {
@@ -43,7 +40,7 @@
 .workspace-card.plan {
     display: flex;
     flex-direction: column;
-    justify-content: space-between; 
+    justify-content: space-between;
 }
 
 .card-header {
@@ -66,8 +63,15 @@
 }
 
 /* Títulos específicos de plan */
-.plan-base-name { color: var(--plan-base-color); font-weight: 700; }
-.plan-advanced-name { color: var(--plan-advanced-color); font-weight: 700; }
+.plan-base-name {
+    color: var(--plan-base-color);
+    font-weight: 700;
+}
+
+.plan-advanced-name {
+    color: var(--plan-advanced-color);
+    font-weight: 700;
+}
 
 .workspace-card ul {
     list-style: none;
@@ -94,22 +98,32 @@
     margin-bottom: 10px;
 }
 
+/* Estilos específicos de base/advance */
+.workspace-card.plan.base {
+    border-color: var(--plan-base-color);
+    box-shadow: 0 0 10px var(--plan-base-color)
+}
+
+.workspace-card.plan.advanced {
+    border-color: var(--plan-advanced-color);
+    box-shadow: 0 0 10px var(--plan-advanced-color);
+}
+
 .workspace-card.plan:hover {
     transform: scale(1.05);
 }
 
 .workspace-card.plan.base:hover {
-    box-shadow: 0 0 10px var(--plan-base-color);
+    box-shadow: 0 0 20px var(--plan-base-color);
 }
 
 .workspace-card.plan.advanced:hover {
-    box-shadow: 0 0 10px var(--plan-advanced-color);
+    box-shadow: 0 0 20px var(--plan-advanced-color);
 }
-
 
 /* Línea legalidad */
 .workspace-legal {
-    grid-column: 1 / -1; 
+    grid-column: 1 / -1;
     text-align: center;
     margin-top: 40px;
 }
@@ -125,7 +139,7 @@ section h2 {
     margin-bottom: 10px;
 }
 
-section h2 + p {
+section h2+p {
     font-size: clamp(1rem, 1.5vw, 1.3rem);
     text-align: center;
     margin-bottom: 40px;
@@ -135,8 +149,8 @@ section h2 + p {
 .services-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 30px; 
-    max-width: 1200px; 
+    gap: 30px;
+    max-width: 1200px;
     margin: 0 auto 80px auto;
 }
 
@@ -161,7 +175,7 @@ section h2 + p {
 .service-text {
     display: flex;
     flex-direction: column;
-    flex-grow: 1; 
+    flex-grow: 1;
     margin-left: 5px;
     padding: 20px;
 }
@@ -176,7 +190,7 @@ section h2 + p {
 
 .service-header svg {
     color: var(--primary-color);
-    flex-shrink: 0; 
+    flex-shrink: 0;
 }
 
 .service-header h2 {
@@ -188,10 +202,10 @@ section h2 + p {
 }
 
 .service-card img {
-    max-width: 150px; 
+    max-width: 150px;
     width: 100%;
-    height: 100%; 
-    object-fit: cover; 
+    height: 100%;
+    object-fit: cover;
     flex-shrink: 0;
 }
 
@@ -219,16 +233,16 @@ section h2 + p {
 /* ==================== MEDIA QUERIES (Móvil) ==================== */
 
 @media (max-width: 768px) {
-    
-    .workspace-container  {
+
+    .workspace-container {
         grid-template-columns: 1fr;
         padding: 0 20px;
     }
 
     .services-container {
-        grid-template-columns:1fr;
+        grid-template-columns: 1fr;
         padding: 0 20px;
     }
 
-    
+
 }
