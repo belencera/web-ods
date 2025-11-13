@@ -1,0 +1,246 @@
+/* Header y títulos */
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+header h1 {
+    margin: 10px 0;
+    font-size: clamp(2rem, 3.5vw, 2.5rem);
+    font-weight: 700;
+    color: var(--text-color);
+    padding: 0 10px;
+}
+
+.subtitle {
+    font-size: clamp(1rem, 1.5vw, 1.3rem);
+    color: var(--text-color);
+    padding: 0 10px;
+}
+
+.secondary-title {
+    font-size: clamp(1.8rem, 2.5vw, 2.3rem);
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-align: center;
+    color: var(--text-color);
+    padding: 0 10px;
+}
+
+
+/* ==================== PLAN CARDS (TARJETAS) ==================== */
+
+.plan-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 35px;
+    margin: 0 auto 80px auto;
+    padding: 0;
+}
+
+.plan {
+    background: var(--super-light-color);
+    backdrop-filter: blur(2px);
+    padding: clamp(20px, 3vw, 25px);
+    max-width: 290px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+/*Títulos y textos de las tarjetas */
+.plan h2 {
+    margin-top: 0; 
+    margin-bottom: 0.5rem; 
+    font-size: clamp(1.8rem, 2.5vw, 2.1rem);
+    font-weight: 500;
+    text-align: center;
+}
+
+.plan h3 {
+    margin-top: 0; 
+    margin-bottom: 1.5rem; 
+    text-align: center;
+    font-size: clamp(1rem, 1.2vw, 1.2rem);
+    font-weight: 100;
+    color: var(--light-color);
+}
+
+/* Colores de marca en los títulos */
+.plan.starter h2 {
+    color: var(--plan-starter-color);
+}
+
+.plan.growth h2 {
+    color: var(--plan-growth-color);
+}
+
+.plan.scale h2 {
+    color: var(--plan-scale-color);
+}
+
+.plan.equity h2 {
+    color: var(--plan-equity-color);
+}
+
+/* Estilos específicos de la lista de servicios incluidos */
+.plan-list {
+    margin: 120px 0 15px 0;
+}
+
+.plan-list {
+    margin-top: 0; 
+    margin-bottom: 15px;
+    flex-grow: 1; 
+}
+
+.plan-list ul {
+    margin-top: 10px;
+    padding-left: 20px;
+    list-style-type: disc;
+}
+
+.plan-list ul li {
+    padding: 0.1rem 0;
+}
+
+/* Borde específico para cada servicio */
+.plan.starter {
+    box-shadow: 0 0 10px var(--plan-starter-color);
+}
+
+.plan.growth {
+    box-shadow: 0 0 10px var(--plan-growth-color);
+}
+
+.plan.scale {
+    box-shadow: 0 0 10px var(--plan-scale-color);
+}
+
+.plan.equity {
+    border: var(--plan-equity-color) solid 2px;
+    box-shadow: 0 0 10px var(--plan-equity-color);
+}
+
+/* Hover general y específico de cada servicio */
+.plan:hover {
+    transform: scale(1.05);
+}
+
+.plan.starter:hover {
+    border-color: var(--plan-starter-color);
+    box-shadow: 0 0 30px var(--plan-starter-color)
+}
+
+.plan.growth:hover {
+    border-color: var(--plan-growth-color);
+    box-shadow: 0 0 30px var(--plan-growth-color)
+}
+
+.plan.scale:hover {
+    border-color: var(--plan-scale-color);
+    box-shadow: 0 0 30px var(--plan-scale-color)
+}
+
+.plan.equity:hover {
+    border-color: var(--plan-equity-color);
+    box-shadow: 0 0 30px var(--plan-equity-color)
+}
+
+
+/* ===================== TABLA RESUMEN PLANES ==================== */
+
+.resume-table {
+    margin: 30px 50px 60px 50px;
+    overflow-x: auto;
+}
+
+.resume-table table {
+    width: 100%;
+    min-width: 800px;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+th,
+td {
+    border-bottom: 1px solid #dddddd29;
+    border-left: none;
+    border-right: none;
+    padding: 0.8rem;
+}
+
+/* Estilo para las celdas de la primera columna */
+td:first-child {
+    text-align: left;
+    padding-left: 1.1rem;
+    font-weight: 400;
+}
+
+/* Encabezados de la tabla */
+thead th {
+    font-weight: 600;
+    font-size: clamp(1.2rem, 1.7vw, 1.7rem);
+    padding: 10px 10px 25px 10px;
+}
+
+/* Colores específicos para cada título de plan */
+th.starter {
+    color: var(--plan-starter-color);
+}
+
+th.growth {
+    color: var(--plan-growth-color);
+}
+
+th.scale {
+    color: var(--plan-scale-color);
+}
+
+th.equity {
+    color: var(--plan-equity-color);
+}
+
+/* Personalización del scrollbar horizontal cuando se reduce tamaño en el navegador */
+.resume-table::-webkit-scrollbar {
+    height: 5px;
+}
+
+.resume-table::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.resume-table::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 10px;
+    border: 1px solid #202020;
+}
+
+
+/* ==================== MEDIA QUERIES ====================*/
+
+@media (max-width: 768px) {
+
+    /* Cards */
+    .plan-container {
+        padding: 0 10px;
+        gap: 25px;
+    }
+
+    .plan {
+        padding: 20px;
+    }
+
+    /* Tabla de resumen */
+    .resume-table {
+        margin: 30px 30px 60px 30px;
+        padding: 0;
+    }
+}
