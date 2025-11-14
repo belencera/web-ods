@@ -128,12 +128,17 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    transition: transform 0.3s ease;
+}
+
+.service-card-item:hover {
+    transform: scale(1.1);
 }
 
 .service-card-item svg {
     margin: 0 auto 10px auto;
     display: block;
-    color: var(--secondary-color);
+    color: var(--primary-color);
 }
 
 .service-card-item h3 {
