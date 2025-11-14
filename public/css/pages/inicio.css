@@ -1,0 +1,303 @@
+/* --- SECCIÓN HERO --- */
+
+.hero-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 50vh; /* Altura mínima para que ocupe la mayor parte de la pantalla */
+    text-align: center;
+    padding: 0 20px;
+    margin: 10px auto;
+}
+
+.hero-brand {
+    display: flex;
+
+}
+
+/* Imagen principal (Logo) */
+.hero-header img {
+    width: auto; 
+    max-width: 180px; 
+    height: auto; 
+    margin-right: 15px; 
+    object-fit: contain;
+
+    animation: fadeInSlideUp 1s ease-out forwards;
+    animation-delay: 0.1s;
+    opacity: 0;
+}
+
+
+/* --- TÍTULOS CON DEGRADADO Y ANIMACIÓN --- */
+
+/* H1: ON DEMAND (Estilo principal, se aplica a toda la línea) */
+.main-title {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 6.5rem;
+    letter-spacing: 3px;
+    line-height: 1.1;
+    
+    /* Degradado */
+    background: linear-gradient(90deg, #d1d5db, #f3f4f6, #d1d5db);
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.15); 
+
+    /* Animación */
+    animation: fadeInSlideUp 1s ease-out forwards;
+    animation-delay: 0.2s;
+    opacity: 0;
+}
+
+/* Span: SOLUTIONS (Estilo de la segunda línea) */
+.second-line-text {
+    display: block; 
+    font-size: 5.6rem; 
+    
+    /* Degradado y Clip */
+    background: linear-gradient(90deg, #c1c1c1, #133d91, #0a70e0);
+    background-clip: text;
+    color: transparent;
+
+    /* Animación: SOLUTIONS (Retraso mayor) */
+    animation: fadeInSlideUp 1s ease-out forwards;
+    animation-delay: 0.5s;
+    opacity: 0;
+}
+
+/* H2: Tagline (Frase de portada) */
+.tagline {
+    font-size: 2rem;
+    font-weight: 300;
+    margin-top: 30px;
+    margin-bottom: 20px;
+
+    /* Animación */
+    animation: fadeInSlideUp 1s ease-out forwards;
+    animation-delay: 0.9s;
+    opacity: 0;
+}
+
+/* Animación */
+@keyframes fadeInSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* --- SECCIÓN CARRUSEL DE SERVICIOS --- */
+
+.services-carousel {
+    padding: 80px 0;
+    overflow: hidden; 
+    text-align: center;
+}
+
+/* Contenedor del Slider */
+.carousel-container {
+    overflow: hidden; 
+    margin: 0 70px;
+    padding: 10px;
+
+    /* Fade lateral */
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+    mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+}
+
+.carousel-track {
+    display: flex;
+}
+
+/* Tarjeta individual del servicio */
+.service-card-item {
+    flex-shrink: 0;
+    width: 260px;
+    height: auto;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    margin-right: 15px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.service-card-item svg {
+    margin: 0 auto 10px auto;
+    display: block;
+    color: var(--secondary-color);
+}
+
+.service-card-item h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.service-card-item p {
+    font-size: 0.95rem;
+    color: var(--text-color);
+    margin-bottom: 10px;
+}
+
+/* Animación de movimiento infinito (Usada por JS) */
+@keyframes scroll-loop {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); } 
+}
+
+/* Título y botones carousel */
+section h2 {
+    text-align: center;
+    font-size: 2.1rem;
+    margin: 60px 0 30px 0;
+}
+
+.carousel-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.carousel-buttons a {
+    font-size: 1.2rem;
+    padding: 10px 40px;
+    max-width: 250px;
+}
+
+
+/* --- SECCIÓN NUESTRA HISTORIA --- */
+
+.about-section {
+    margin-top: 100px;
+}
+
+.about-section p {
+    font-size: 1.2rem;
+    font-weight: 320;
+    text-align: center;
+    margin: 0 80px 40px 80px;
+}
+
+/* ==================== MEDIA QUERIES (Móvil) ==================== */
+
+@media (max-width: 768px) {
+    
+    /* --- SECCIÓN HERO --- */
+    
+    .hero-header {
+        min-height: 70vh; 
+        padding: 0 10px;
+    }
+
+    .hero-brand {
+        flex-direction: column; 
+        align-items: center;
+    }
+    
+    .hero-header img {
+        max-width: 120px; 
+        margin-right: 0; 
+        margin-bottom: 10px; 
+    }
+
+    /* H1: ON DEMAND */
+    .main-title {
+        font-size: clamp(3rem, 12vw, 5.5rem); 
+        letter-spacing: 2px;
+        line-height: 1;
+    }
+
+    /* Span: SOLUTIONS */
+    .second-line-text {
+        font-size: clamp(2.5rem, 10vw, 4.5rem); 
+    }
+
+    /* H2: Tagline */
+    .tagline {
+        font-size: 1.3rem;
+        margin-top: 20px;
+        padding: 0 20px;
+    }
+
+    /* --- SECCIÓN CARRUSEL DE SERVICIOS --- */
+
+    /* Título principal de la sección */
+    .services-carousel h2 {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+    }
+    
+    /* Contenedor del Slider */
+    .carousel-container {
+        margin: 0 5px; 
+        padding: 0;
+        
+        /* Ajustar el fade lateral para que sea más sutil */
+        -webkit-mask-image: linear-gradient(to right, transparent 0%, black 2%, black 98%, transparent 100%);
+        mask-image: linear-gradient(to right, transparent 0%, black 2%, black 98%, transparent 100%);
+    }
+
+    /* Tarjeta individual del servicio */
+    .service-card-item {
+        width: 200px;
+        height: auto;
+        padding: 15px;
+        margin-right: 10px; 
+    }
+    
+    .service-card-item h3 {
+        font-size: 1.1rem;
+    }
+
+    .service-card-item svg {
+        width: 30px;
+        height: 30px;
+    }
+    
+    
+    .carousel-buttons {
+        flex-direction: column; 
+        gap: 15px;
+        padding: 10px;
+    }
+
+    .carousel-buttons a {
+        width: 100%; 
+        max-width: 300px; 
+        margin: 0 auto;
+        font-size: 1rem;;
+    }
+
+    section h2 {
+        font-size: 1.8rem;
+    }
+    
+    /* --- SECCIÓN NUESTRA HISTORIA --- */
+
+    .about-section {
+        margin-top: 60px;
+        padding: 0 10px;
+    }
+
+    .about-section h2, .about-section h3 {
+        padding: 0 15px;
+    }
+
+    .about-section p {
+        margin: 0 0 30px 0;
+        padding: 0 15px;
+        font-size: 1.1rem;
+    }
+}

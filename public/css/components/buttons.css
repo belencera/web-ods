@@ -25,3 +25,7 @@
   transform: scale(1.04);
   background-color: rgba(0, 191, 255, 0.05);
 }
+
+.btn-secondary {
+  box-shadow: 0 0 5px var(--primary-color);
+}
