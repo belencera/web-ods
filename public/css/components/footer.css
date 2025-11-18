@@ -184,5 +184,12 @@
 
     .footer-legal {
         justify-content: center;
+        line-height: 0.7;
+        margin: 1rem;
+    }
+
+    .footer-copyright,
+    .footer-legal a {
+        white-space: normal;
     }
 }

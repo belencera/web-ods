@@ -157,6 +157,21 @@ main h2 {
     transform: scale(1.05);
 }
 
+/*Evita que el texto se meta debajo de las banderas */
+#phone {
+    padding-left: 52px !important;
+}
+
+.country-select {
+    width: 100%;
+}
+
+.country-select input {
+    width: 100%;
+    padding-left: 52px !important;
+}
+
+
 /* ==================== MEDIA QUERIES (Ajuste Móvil) ==================== */
 @media (max-width: 768px) {
 

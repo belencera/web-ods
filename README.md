@@ -16,6 +16,7 @@ web-ods/
 │   ├── css/               # Estilos CSS
 │   │   ├── main.css       # Estilos principales
 │   │   ├── components/    # Estilos de componentes
+│   │   ├── pages.css      # Estilos de páginas
 │   │   └── utilities/     # Utilidades CSS
 │   └── js/                # JavaScript del cliente
 │       ├── main.js        # JavaScript principal

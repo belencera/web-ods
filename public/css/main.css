@@ -4,7 +4,7 @@
 
 /* Importar componentes y utilidades */
 @import url('../css/components/navigation.css');
-@import url('./components/footer.css');
+@import url('../css/components/footer.css');
 @import url('./components/buttons.css');
 @import url('./components/header.css');
 @import url('./utilities/spacing.css');
