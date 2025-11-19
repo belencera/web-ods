@@ -1,15 +1,17 @@
 /**
  * Rutas principales de la API
- * Aquí definirás tus endpoints
  */
 
 const express = require('express');
 const router = express.Router();
 
-// Ejemplo de ruta
+// Ruta de salud del servidor
 router.get('/health', (req, res) => {
   res.json({ status: 'OK', message: 'Servidor funcionando correctamente' });
 });
+
+// Ruta para contacto
+router.use("/contact", require("./contact"));
 
 // Aquí agregarás más rutas
 // router.use('/payments', require('./payments'));

@@ -1,6 +1,5 @@
 /**
  * Servidor principal de la aplicación
- * Este archivo se usará cuando implementes el backend
  */
 
 const express = require('express');
@@ -17,8 +16,8 @@ app.use(express.urlencoded({ extended: true }));
 // Servir archivos estáticos desde la carpeta public
 app.use(express.static(path.join(__dirname, '../public')));
 
-// Rutas de la API (cuando las implementes)
-// app.use('/api', require('./routes/index'));
+// Rutas de la API 
+app.use('/api', require('./routes/index'));
 
 // Ruta principal - servir index.html
 app.get('/', (req, res) => {
