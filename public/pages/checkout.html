@@ -10,6 +10,7 @@
     <!-- Estilos -->
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/pages/checkout.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@17.0.19/build/css/intlTelInput.min.css"/>
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="../assets/icons/favicon.ico">
@@ -41,6 +42,15 @@
                     <label>Teléfono:</label>
                     <input type="tel" id="phone" name="phone" required>
 
+                    <label>Ciudad:</label>
+                    <input type="text" id="city" name="city" required>
+
+                    <label>Provincia:</label>
+                    <input type="text" id="province" name="province" required>
+                    
+                    <label>País:</label>
+                    <input type="text" id="country" name="country" required>
+
                     <div class="checkbox terms">
                         <input type="checkbox" id="terms" name="terms" required>
                         <label for="terms">Acepto los términos y condiciones</label>
@@ -63,6 +73,9 @@
     </div>
 
     <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@17.0.19/build/js/intlTelInput.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@17.0.19/build/js/utils.js"></script>
+
     <script src="../js/components/navigation.js"></script>
     <script src="../js/components/footer.js"></script>
     <script src="../js/pages/checkout.js"></script>

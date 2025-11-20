@@ -4,7 +4,7 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 
 const sendProductToSheet = async (req, res) => {
     try {
-        const { name, company, email, phone, terms, extraCheck, product } = req.body;
+        const { name, company, email, phone, city, province, country, terms, extraCheck, product } = req.body;
 
         // 1️⃣ Guardar en Google Sheets
         const sheetResponse = await fetch(process.env.GOOGLE_SCRIPT_CHECKOUT_URL, {
@@ -18,14 +18,13 @@ const sendProductToSheet = async (req, res) => {
             throw new Error("No se pudo guardar en Google Sheets");
         }
 
-        // 2️⃣ Mapear producto a ID de Stripe (solo si aplica)
+        // 2️⃣ Mapear producto a ID de Stripe
         const priceIds = {
             "plan-starter": process.env.STRIPE_PRICE_STARTER,
             "plan-growth": process.env.STRIPE_PRICE_GROWTH,
             "plan-scale": process.env.STRIPE_PRICE_SCALE,
             "plan-equity": process.env.STRIPE_PRICE_EQUITY,
-            // puedes agregar servicios u otros productos aquí
-            "service-branding": process.env.STRIPE_PRICE_SERVICE_BRANDING
+            // Agregar aquí otros productos en el futuro
         };
 
         // 3️⃣ Crear sesión Stripe solo si hay priceId

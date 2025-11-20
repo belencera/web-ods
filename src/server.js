@@ -15,16 +15,15 @@ app.use(express.urlencoded({ extended: true }));
 
 // Middleware de seguridad para permitir conexiones internas (fetch) y scripts
 app.use((req, res, next) => {
-    res.setHeader(
-      'Content-Security-Policy',
-      // Permite conexiones y scripts desde el propio origen ('self') y localhost
-      "default-src 'self' http://localhost:3000;" + 
-      "connect-src 'self' http://localhost:3000;" + 
-      "script-src 'self';" + 
-      // Permite estilos en línea (unsafe-inline)
-      "style-src 'self' 'unsafe-inline';"
-    );
-    next();
+  res.setHeader(
+    'Content-Security-Policy',
+    "default-src 'self' http://localhost:3000;" +
+    "connect-src 'self' http://localhost:3000 https://ipinfo.io;" +
+    "script-src 'self' https://cdn.jsdelivr.net;" +
+    "style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net;" +
+    "img-src 'self' https://cdn.jsdelivr.net;"
+  );
+  next();
 });
 
 // Servir archivos estáticos desde la carpeta public
