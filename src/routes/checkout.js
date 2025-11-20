@@ -1,8 +1,8 @@
 const express = require("express");
-const { sendPlanToSheet } = require("../controllers/planCheckoutController");
+const { sendProductToSheet } = require("../controllers/checkoutController");
 
 const router = express.Router();
 
-router.post("/", sendPlanToSheet);
+router.post("/", sendProductToSheet);
 
 module.exports = router;

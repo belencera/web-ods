@@ -1,0 +1,70 @@
+/* =============== Títulos y textos ================ */
+
+.checkout-container h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* ==================== FORMULARIO DE COMPRA ==================== */
+
+/* Formulario */
+#checkoutForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px 40px;
+
+}
+
+/* Etiquetas (Labels) */
+#checkoutForm label {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+
+/* Estilos de Campos de Texto y Área de Texto */
+#checkoutForm input[type="text"],
+#checkoutForm input[type="email"],
+#checkoutForm input[type="tel"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    font-size: 1rem;
+}
+
+#checkoutForm input[type="checkbox"] {
+    width: auto;
+    margin: 0 10px;
+}
+
+.checkbox.terms {
+    margin-top: 20px;
+}
+/* Foco de los campos (Focus) */
+#checkoutForm input:focus {
+    outline: none;
+    box-shadow: 0 0 5px var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+/* Estilo del botón Finalizar compra */
+.btn-checkout {
+    padding: 12px 20px;
+}
+
+/* Texto "Cargando..." */
+.loading {
+    display: none;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 1.1rem;
+    color: #333;
+}

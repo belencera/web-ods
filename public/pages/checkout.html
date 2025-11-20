@@ -9,6 +9,7 @@
 
     <!-- Estilos -->
     <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/pages/checkout.css">
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="../assets/icons/favicon.ico">
@@ -17,18 +18,16 @@
 <body>
     <div class="container">
         <header>
-            <h1>Checkout - On Demand Solutions</h1>
+            <h1>¿Listo para dar el siguiente paso?</h1>
         </header>
 
         <main>
             <div class="checkout-container">
 
-                <h1>Completa tu información</h1>
-
-                <p>Estás a un paso de impulsar tu negocio 🚀</p>
+                <h2>Completa tus datos para finalizar: </h2>
 
                 <form id="checkoutForm">
-                    <input type="hidden" id="plan" name="plan">
+                    <input type="hidden" id="product" name="product">
 
                     <label>Nombre completo:</label>
                     <input type="text" id="name" name="name" required>
@@ -40,9 +39,9 @@
                     <input type="text" id="company" name="company" required>
 
                     <label>Teléfono:</label>
-                    <input type="text" id="phone" name="phone" required>
+                    <input type="tel" id="phone" name="phone" required>
 
-                    <div class="checkbox">
+                    <div class="checkbox terms">
                         <input type="checkbox" id="terms" name="terms" required>
                         <label for="terms">Acepto los términos y condiciones</label>
                     </div>
@@ -52,11 +51,11 @@
                         <label for="extraCheck">Acepto recibir información o contenido relevante</label>
                     </div>
 
-                    <button type="submit" class="btn btn-primary">Ir a pagar</button>
+                    <button type="submit" class="btn btn-primary btn-checkout">Finalizar compra</button>
                 </form>
 
 
-                <p id="loading" style="display:none;margin-top:20px;">
+                <p id="loading" class="loading">
                     Procesando tu información… ⏳
                 </p>
             </div>
