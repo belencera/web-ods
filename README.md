@@ -27,13 +27,10 @@ web-ods/
 ├── src/                   # Backend - Código del servidor
 │   ├── server.js          # Servidor principal (Node.js)
 │   ├── routes/            # Rutas de la API
-│   │   ├── index.js
-│   │   └── payments.js    # Rutas de Stripe 
 │   ├── controllers/       # Controladores
 │   ├── models/            # Modelos de datos
 │   ├── middleware/        # Middleware personalizado
 │   ├── config/            # Configuración
-│   │   └── stripe.js      # Configuración de Stripe 
 │   └── utils/             # Utilidades del backend
 │
 ├── .env                   # Variables de entorno 

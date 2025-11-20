@@ -13,6 +13,20 @@ const PORT = process.env.PORT || 3000;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+// Middleware de seguridad para permitir conexiones internas (fetch) y scripts
+app.use((req, res, next) => {
+    res.setHeader(
+      'Content-Security-Policy',
+      // Permite conexiones y scripts desde el propio origen ('self') y localhost
+      "default-src 'self' http://localhost:3000;" + 
+      "connect-src 'self' http://localhost:3000;" + 
+      "script-src 'self';" + 
+      // Permite estilos en línea (unsafe-inline)
+      "style-src 'self' 'unsafe-inline';"
+    );
+    next();
+});
+
 // Servir archivos estáticos desde la carpeta public
 app.use(express.static(path.join(__dirname, '../public')));
 

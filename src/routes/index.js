@@ -13,8 +13,9 @@ router.get('/health', (req, res) => {
 // Ruta para contacto
 router.use("/contact", require("./contact"));
 
-// Aquí agregarás más rutas
-// router.use('/payments', require('./payments'));
+// Ruta para checkout de planes
+router.use("/checkout", require("./checkout"));
+
 
 module.exports = router;
 

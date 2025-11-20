@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aviso Legal - Web On Demand Solutions">
+    <title>Checkout</title>
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="../css/main.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../assets/icons/favicon.ico">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Checkout - On Demand Solutions</h1>
+        </header>
+
+        <main>
+            <div class="checkout-container">
+
+                <h1>Completa tu información</h1>
+
+                <p>Estás a un paso de impulsar tu negocio 🚀</p>
+
+                <form id="checkoutForm">
+                    <input type="hidden" id="plan" name="plan">
+
+                    <label>Nombre completo:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label>Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label>Empresa:</label>
+                    <input type="text" id="company" name="company" required>
+
+                    <label>Teléfono:</label>
+                    <input type="text" id="phone" name="phone" required>
+
+                    <div class="checkbox">
+                        <input type="checkbox" id="terms" name="terms" required>
+                        <label for="terms">Acepto los términos y condiciones</label>
+                    </div>
+
+                    <div class="checkbox">
+                        <input type="checkbox" id="extraCheck" name="extraCheck">
+                        <label for="extraCheck">Acepto recibir información o contenido relevante</label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Ir a pagar</button>
+                </form>
+
+
+                <p id="loading" style="display:none;margin-top:20px;">
+                    Procesando tu información… ⏳
+                </p>
+            </div>
+        </main>
+    </div>
+
+    <!-- Scripts -->
+    <script src="../js/components/navigation.js"></script>
+    <script src="../js/components/footer.js"></script>
+    <script src="../js/pages/checkout.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+
+</html>

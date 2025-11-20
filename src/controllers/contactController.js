@@ -1,4 +1,4 @@
-const fetch = require("node-fetch"); // o nativo de Node 18+
+const fetch = require("node-fetch"); 
 
 const sendContactToSheet = async (req, res) => {
   try {
