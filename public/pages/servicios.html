@@ -75,12 +75,12 @@
                             </li>
                         </ul>
                         <div class="select-container">
-                            <select id="planSelect">
+                            <select id="workspaceBase">
                                 <option value="workspace-base-monthly">$50 USD / mes</option>
                                 <option value="workspace-base-annual">$40 USD / mes - Pago único anual</option>
                             </select>
                         </div>
-                        <button class="btn btn-primary" id="goCheckout">Seleccionar</button>
+                        <a href="#" class="btn btn-primary" id="btnWorkspaceBase">Seleccionar</a>
                     </div>
 
                     <!-- Tarjeta demo -->
@@ -129,12 +129,12 @@
                             </li>
                         </ul>
                         <div class="select-container">
-                            <select id="planSelect">
+                            <select id="workspaceAdvanced">
                                 <option value="workspace-advanced-monthly">$110 USD / mes</option>
                                 <option value="workspace-advanced-annual">$80 USD / mes - Pago único anual</option>
                             </select>
                         </div>
-                        <button class="btn btn-primary" id="goCheckout">Seleccionar</button>
+                        <a href="#" class="btn btn-primary" id="btnWorkspaceAdvanced">Seleccionar</a>
                     </div>
                 </div>
 
@@ -269,6 +269,7 @@
     </div>
 
     <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
     <script src="../js/components/navigation.js"></script>
     <script src="../js/components/footer.js"></script>
     <script src="../js/pages/servicios.js"></script>
