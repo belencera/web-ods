@@ -121,12 +121,99 @@
     box-shadow: 0 0 20px var(--plan-advanced-color);
 }
 
+/* Selección de precio */
+.select-container {
+    display: flex;
+    justify-content: center;
+    margin: 10px auto;
+}
+
+select {
+    width: 300px;
+    padding: 5px 10px;
+    font-size: 1rem;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    background: var(--super-light-color);
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+select option {
+    background: var(--super-light-color);
+    color: var(--text-color);
+}
+
 /* Línea legalidad */
 .workspace-legal {
     grid-column: 1 / -1;
     text-align: center;
     margin-top: 40px;
 }
+
+
+/* --- TOOLTIP --- */
+.tooltip {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 18px;
+    height: 18px;
+    margin-left: 6px;
+    font-size: 12px;
+    font-weight: bold;
+    color: var(--dark-color);
+    border: 1px solid var(--dark-color);
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    transition: background 0.2s ease;
+}
+
+.tooltip:hover {
+    background: var(--text-color);
+}
+
+/* Caja del tooltip */
+.tooltiptext {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: calc(100% + 8px);
+    transform: translateY(-50%);
+    width: 220px;
+    background: var(--dark-color);
+    color: var(--text-color);
+    padding: 10px 12px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 300;
+    overflow: visible;
+    z-index: 20;
+    white-space: normal;
+
+    transition: opacity 0.25s ease;
+}
+
+/* Mostrar tooltip */
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Flecha del tooltip */
+.tooltiptext::after {
+    content: "";
+    position: absolute;
+    left: -5px;
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+    width: 10px;
+    height: 10px;
+    background: var(--dark-color);
+}
+    
 
 /* ==================== SECCIÓN SERVICIOS INDIVIDUALES ==================== */
 
@@ -243,7 +330,6 @@ section h2+p {
         grid-template-columns: 1fr;
         padding: 0 20px;
     }
-
 }
 
 @media (max-width: 412px) {
@@ -257,5 +343,36 @@ section h2+p {
         width: 100%;
         max-width: none;
         max-height: 180px;
+    }
+}
+
+@media (max-width: 850px) {
+    .tooltiptext{
+        bottom: calc(100% + 8px);
+        top: auto;
+        left: 50%;
+        transform: translateX(-50%);
+        max-width: calc(100vw - 40px);
+        white-space: normal;
+        word-wrap: break-word;
+        box-sizing: border-box;
+    }
+
+    .tooltiptext.right {
+        left: 0;
+        right: auto;
+        transform: translateX(0);
+        max-width: calc(100vw - 24px);
+    }
+
+    .tooltiptext.left {
+        right: 0;
+        left: auto;
+        transform: translateX(0);
+        max-width: calc(100vw - 24px);
+    }
+
+    .tooltiptext::after {
+        display: none;
     }
 }

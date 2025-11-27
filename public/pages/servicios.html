@@ -43,13 +43,44 @@
                             <h2>Workspace <span class="plan-base-name">BASE</span></h2>
                         </div>
                         <ul>
-                            <li><span>✔</span>Estructura base lista para duplicar en tu cuenta de Notion</li>
-                            <li><span>✔</span>Gestión de ventas, inventario, logística, clientes y proveedores</li>
-                            <li><span>✔</span>Áreas integradas de finanzas, marketing y documentación</li>
-                            <li><span>✔</span>Capacitación básica para tu equipo</li>
+                            <li><span>✔</span>Gestión completa de clientes y productos
+                                <span class="tooltip">i
+                                    <span class="tooltiptext left">Incluye maestro de clientes y maestro de
+                                        productos/servicios.</span>
+                                </span>
+                            </li>
+                            <li><span>✔</span>Control de ventas y registro de compras
+                                <span class="tooltip">i
+                                    <span class="tooltiptext left">Registro de ventas, historial, políticas comerciales,
+                                        compras y desglose de gastos.</span>
+                                </span>
+                            </li>
+                            <li><span>✔</span>Monitoreo básico de finanzas y balances
+                                <span class="tooltip">i
+                                    <span class="tooltiptext left">Balances diarios y mensuales, planillas de ingresos y
+                                        egresos, control de costos y análisis de márgenes.</span>
+                                </span>
+                            </li>
+                            <li><span>✔</span>Creación de reportes y gráficos personalizados
+                                <span class="tooltip">i
+                                    <span class="tooltiptext right">El usuario puede crear reportes y gráficos
+                                        personalizados.</span>
+                                </span>
+                            </li>
+                            <li><span>✔</span>Marketing básico con calendario de publicaciones
+                                <span class="tooltip">i
+                                    <span class="tooltiptext right">Incluye branding básico, logotipos, tipografía y
+                                        calendario de publicaciones.</span>
+                                </span>
+                            </li>
                         </ul>
-                        <p>200&nbsp;$ / mes</p>
-                        <a href="#" class="btn btn-primary base">Seleccionar</a>
+                        <div class="select-container">
+                            <select id="planSelect">
+                                <option value="workspace-base-monthly">$50 USD / mes</option>
+                                <option value="workspace-base-annual">$40 USD / mes - Pago único anual</option>
+                            </select>
+                        </div>
+                        <button class="btn btn-primary" id="goCheckout">Seleccionar</button>
                     </div>
 
                     <!-- Tarjeta demo -->
@@ -68,12 +99,42 @@
                         </div>
                         <ul>
                             <li><span>✔</span>Todo lo incluido en Workspace Base</li>
-                            <li><span>✔</span>CRM avanzado, análisis de ventas y reportes de desempeño</li>
-                            <li><span>✔</span>Automatizaciones e integraciones recomendadas</li>
-                            <li><span>✔</span>Capacitación avanzada + soporte prioritario 3 meses</li>
+                            <li><span>✔</span>Gestión avanzada de ventas y clientes
+                                <span class="tooltip">i
+                                    <span class="tooltiptext left">Registro completo de ventas con estrategia,
+                                        previsión,
+                                        seguimiento y calificación de clientes.</span>
+                                </span>
+                            </li>
+                            <li><span>✔</span>Monitoreo completo de finanzas avanzadas
+                                <span class="tooltip">i
+                                    <span class="tooltiptext right">Balances diarios, mensuales y anuales +
+                                        personalización
+                                        por área, análisis ROI, márgenes y costos.</span>
+                                </span>
+                            </li>
+                            <li><span>✔</span>Reportes y gráficos completos y personalizados
+                                <span class="tooltip">i
+                                    <span class="tooltiptext right">Reportes y gráficos de todas las áreas (ventas,
+                                        compras,
+                                        clientes, proveedores, inventario) + personalizados.</span>
+                                </span>
+                            </li>
+                            <li><span>✔</span>Marketing avanzado con planificación de contenido
+                                <span class="tooltip">i
+                                    <span class="tooltiptext right">Branding completo, logotipos, tipografía, métricas
+                                        de
+                                        marketing, calendario avanzado y planificación de contenido.</span>
+                                </span>
+                            </li>
                         </ul>
-                        <p>500&nbsp;$ / mes</p>
-                        <a href="#" class="btn btn-primary advanced">Seleccionar</a>
+                        <div class="select-container">
+                            <select id="planSelect">
+                                <option value="workspace-advanced-monthly">$110 USD / mes</option>
+                                <option value="workspace-advanced-annual">$80 USD / mes - Pago único anual</option>
+                            </select>
+                        </div>
+                        <button class="btn btn-primary" id="goCheckout">Seleccionar</button>
                     </div>
                 </div>
 
@@ -101,7 +162,11 @@
                         <img src="../assets/images/coding.jpg" alt="Servicio 1">
                         <div class="service-text">
                             <div class="service-header">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 20 20"><path fill="currentColor" fill-rule="evenodd" d="M12.316 3.051a1 1 0 0 1 .633 1.265l-4 12a1 1 0 1 1-1.898-.632l4-12a1 1 0 0 1 1.265-.633M5.707 6.293a1 1 0 0 1 0 1.414L3.414 10l2.293 2.293a1 1 0 1 1-1.414 1.414l-3-3a1 1 0 0 1 0-1.414l3-3a1 1 0 0 1 1.414 0m8.586 0a1 1 0 0 1 1.414 0l3 3a1 1 0 0 1 0 1.414l-3 3a1 1 0 1 1-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 0 1 0-1.414" clip-rule="evenodd"/></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 20 20">
+                                    <path fill="currentColor" fill-rule="evenodd"
+                                        d="M12.316 3.051a1 1 0 0 1 .633 1.265l-4 12a1 1 0 1 1-1.898-.632l4-12a1 1 0 0 1 1.265-.633M5.707 6.293a1 1 0 0 1 0 1.414L3.414 10l2.293 2.293a1 1 0 1 1-1.414 1.414l-3-3a1 1 0 0 1 0-1.414l3-3a1 1 0 0 1 1.414 0m8.586 0a1 1 0 0 1 1.414 0l3 3a1 1 0 0 1 0 1.414l-3 3a1 1 0 1 1-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 0 1 0-1.414"
+                                        clip-rule="evenodd" />
+                                </svg>
                                 <h2>Diseño y desarrollo de página web personalizada</h2>
                             </div>
                             <p>Creación de un sitio web personalizado y optimizado para tu negocio, con tecnologías y
@@ -206,6 +271,7 @@
     <!-- Scripts -->
     <script src="../js/components/navigation.js"></script>
     <script src="../js/components/footer.js"></script>
+    <script src="../js/pages/servicios.js"></script>
     <script src="../js/main.js"></script>
 </body>
 

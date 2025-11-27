@@ -290,6 +290,6 @@ th.equity {
     /* Tabla de resumen */
     .resume-table {
         margin: 30px 30px 60px 30px;
-        padding: 0;
+        padding-bottom: 70px;
     }
 }
