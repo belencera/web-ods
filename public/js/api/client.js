@@ -3,7 +3,7 @@
  * Utilidades para hacer peticiones al backend
  */
 
-const API_BASE_URL = '/api'; // Ajusta según tu configuración
+const API_BASE_URL = 'https://api.ondemand.com.ar'; 
 
 /**
  * Realiza una petición GET
