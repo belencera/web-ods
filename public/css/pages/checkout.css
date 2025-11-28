@@ -57,6 +57,7 @@
 
 /* Estilo del botón Finalizar compra */
 .btn-checkout {
+    margin-top: 20px;
     padding: 12px 20px;
 }
 

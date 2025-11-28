@@ -12,7 +12,7 @@ web-ods/
 │   │   ├── images/        # Imágenes
 │   │   ├── icons/         # Iconos
 │   │   ├── fonts/         # Fuentes personalizadas
-│   │   └── videos/        # Videos (si aplica)
+│   │   └── videos/        # Videos 
 │   ├── css/               # Estilos CSS
 │   │   ├── main.css       # Estilos principales
 │   │   ├── components/    # Estilos de componentes
