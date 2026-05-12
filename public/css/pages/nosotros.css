@@ -46,55 +46,6 @@
     color: var(--text-color);
 }
 
-/* ==================== SECCIÓN 2: EQUIPO ==================== */
-
-.team-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-    padding: 0 10px;
-}
-
-.team-card {
-    padding: 20px;
-    max-width: 350px;
-    width: 100%;
-    text-align: center;
-}
-
-
-.team-img {
-    aspect-ratio: 1 / 1;
-    width: clamp(140px, 20vw, 160px);
-    height: auto;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 25px;
-    border: 2px solid var(--primary-color);
-    padding: 5px;
-}
-
-.team-card h3 {
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: var(--light-color);
-    margin-bottom: 0.3rem;
-}
-
-.team-card h4 {
-    font-size: 1rem;
-    font-weight: 400;
-    color: var(--primary-color);
-    margin-bottom: 1rem;
-}
-
-.team-card p {
-    font-size: 0.95rem;
-    line-height: 1.6;
-    color: var(--text-color);
-}
-
 
 /* ==================== MEDIA QUERIES (Móvil) ==================== */
 
