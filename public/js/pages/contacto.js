@@ -59,7 +59,16 @@ document.addEventListener("DOMContentLoaded", function () {
         message: document.getElementById("message").value.trim(),
       };
 
+      // Obtener el botón de envío
+      const submitBtn = document.getElementById("btn-form");
+      const originalBtnText = submitBtn.textContent;
+
       try {
+        // Desabilitar botón y mostrar carga
+        submitBtn.disabled = true;
+        submitBtn.textContent = "Enviando...";
+        submitBtn.style.opacity = "0.7";
+
         const res = await fetch("https://web-ods-api.onrender.com/api/contact", {
           method: "POST",
           body: JSON.stringify(data),
@@ -79,6 +88,11 @@ document.addEventListener("DOMContentLoaded", function () {
       } catch (error) {
         console.error("Error enviando datos:", error);
         alert("No se pudo enviar el formulario. Inténtalo más tarde.");
+      } finally {
+        // Restaurar botón a estado normal
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalBtnText;
+        submitBtn.style.opacity = "1";
       }
     });
   }
