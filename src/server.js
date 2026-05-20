@@ -35,10 +35,11 @@ app.use((req, res, next) => {
   res.setHeader(
     'Content-Security-Policy',
     "default-src 'self' http://localhost:3000;" +
-    "connect-src 'self' http://localhost:3000 https://ipinfo.io;" +
+    "connect-src 'self' http://localhost:3000 https://ipinfo.io https://web-ods-api.onrender.com;" +
     "script-src 'self' https://cdn.jsdelivr.net https://code.jquery.com https://cdnjs.cloudflare.com;" +
     "style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com;" +
-    "img-src 'self' https://cdn.jsdelivr.net;"
+    "img-src 'self' https://cdn.jsdelivr.net;" +
+    "font-src 'self' https://cdnjs.cloudflare.com;"
   );
   next();
 });
