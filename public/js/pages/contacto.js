@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
       };
 
       try {
-        const res = await fetch("/api/contact", {
+        const res = await fetch("https://web-ods-api.onrender.com/api/contact", {
           method: "POST",
           body: JSON.stringify(data),
           headers: {
