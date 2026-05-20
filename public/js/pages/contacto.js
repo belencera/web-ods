@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const input = document.querySelector("#phone");
   if (input) {
     window.intlTelInput(input, {
-      initialCountry: "auto",
+      initialCountry: "ar",
       geoIpLookup: function (callback) {
         fetch("https://ipinfo.io/json?token=b0b065e9440fe0")
           .then((resp) => resp.json())
@@ -20,8 +20,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const countryInput = document.querySelector("#country");
   if (countryInput && typeof $ !== "undefined" && typeof $.fn.countrySelect !== "undefined") {
     $(countryInput).countrySelect({
-      preferredCountries: ['es', 'mx', 'ar'],
-      defaultCountry: "auto",
+      preferredCountries: ['ar', 'es', 'mx'],
+      defaultCountry: "ar",
       geoIpLookup: function (callback) {
         fetch("https://ipinfo.io/json?token=b0b065e9440fe0")
           .then(resp => resp.json())
