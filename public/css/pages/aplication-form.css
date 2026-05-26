@@ -1,0 +1,161 @@
+/* =============== Títulos y textos ================ */
+
+.aplication-container h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* ==================== FORMULARIO DE APLICACIÓN ==================== */
+
+.aplication-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px 40px;
+}
+
+/* Etiquetas de campos */
+.aplication-form > label {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+
+/* Campos de texto, email, teléfono y número */
+.aplication-form input[type="text"],
+.aplication-form input[type="email"],
+.aplication-form input[type="tel"],
+.aplication-form input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    font-size: 1rem;
+}
+
+.aplication-form input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.aplication-form input[type="number"]::-webkit-outer-spin-button,
+.aplication-form input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Select */
+.aplication-form select {
+    width: 100%;
+    padding: 10px 36px 10px 10px;
+    border: none;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%23ffffff' d='M6 8L0 0h12z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+}
+
+.aplication-form select option {
+    background: #1a1a2e;
+    color: #fff;
+}
+
+/* Textarea */
+.aplication-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    font-size: 1rem;
+    font-family: inherit;
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Foco de los campos */
+.aplication-form input:focus,
+.aplication-form select:focus,
+.aplication-form textarea:focus {
+    outline: none;
+    box-shadow: 0 0 5px var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+/* Grupo de checkboxes */
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: -5px;
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.checkbox label {
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 0;
+    cursor: pointer;
+}
+
+.checkbox input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    flex-shrink: 0;
+    accent-color: var(--primary-color);
+    cursor: pointer;
+}
+
+.checkbox-other {
+    flex-wrap: wrap;
+}
+
+.checkbox-other label {
+    flex-shrink: 0;
+}
+
+.checkbox-other input[type="text"] {
+    flex: 1;
+    min-width: 200px;
+}
+
+.checkbox.terms {
+    margin-top: 20px;
+}
+
+/* intl-tel-input */
+.aplication-form #phone {
+    padding-left: 52px !important;
+}
+
+/* Botón enviar */
+.btn-checkout {
+    margin-top: 20px;
+    padding: 12px 20px;
+}
+
+/* Texto "Cargando..." */
+.loading {
+    display: none;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 1.1rem;
+    color: #333;
+}

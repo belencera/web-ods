@@ -9,7 +9,7 @@
 
     <!-- Estilos -->
     <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/pages/checkout.css">
+    <link rel="stylesheet" href="../css/pages/aplication-form.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@17.0.19/build/css/intlTelInput.min.css"/>
 
     <!-- Favicon -->
@@ -23,15 +23,15 @@
         </header>
 
         <main>
-            <div class="checkout-container">
+            <div class="aplication-container">
 
                 <h2>Completa tus datos para finalizar: </h2>
 
-                <form id="aplicationForm" class="checkout-form">
+                <form id="aplicationForm" class="aplication-form">
                     <label>Nombre y Apellidos:</label>
                     <input type="text" id="fullName" name="fullName" required>
 
-                    <label for="company">Empresa:</label>
+                    <label for="company">Nombre del negocio:</label>
                     <input type="text" id="company" name="company" required>
 
                     <label for="rubric">Rubro:</label>
@@ -51,6 +51,102 @@
 
                     <label for="location">Ubicación:</label>
                     <input type="text" id="location" name="location" required>
+
+                    <label for="products">¿Que vendés?</label>
+                    <select id="products" name="products" required>
+                        <option value="products">Productos</option>
+                        <option value="services">Servicios</option>
+                        <option value="both">Ambos</option>
+                        <option value="other">Otro</option>
+                    </select>
+
+                    <label for="description">Describí brevemente la actividad de tu negocio:</label>
+                    <textarea id="description" name="description" rows="4" required></textarea>
+
+                    <label for="year">Año de comienzo de operaciones de tu negocio:</label>
+                    <input type="number" id="year" name="year" required>
+
+                    <label for="channels">Canales de venta:</label>
+                    <input type="text" name="channels" id="channels" required>
+
+                    <label for="employees">Empleados o personas involucradas:</label>
+                    <input type="text" id="employees" name="employees" required>
+
+                    <label for="income">¿Registrás ingresos?</label>
+                    <select id="income" name="income" required>
+                        <option value="yes">Si</option>
+                        <option value="no">No</option>
+                    </select>
+
+                    <label for="expenses">¿Registrás gastos?</label>
+                    <select id="expenses" name="expenses" required>
+                        <option value="yes">Si</option>
+                        <option value="no">No</option>
+                    </select>
+
+                    <label for="margins">¿Conocés los márgenes de tu negocio?</label>
+                    <select id="margins" name="margins" required>
+                        <option value="yes">Si</option>
+                        <option value="no">No</option>
+                    </select>
+
+                    <label for="clients">¿Tenés un registro de clientes?</label>
+                    <select id="clients" name="clients" required>
+                        <option value="yes">Si</option>
+                        <option value="no">No</option>
+                    </select>
+
+                    <label for="tools">¿Usás alguna herramienta de gestión de tu negocio?</label>
+                    <select id="tools" name="tools" required>
+                        <option value="yes">Si</option>
+                        <option value="no">No</option>
+                    </select>
+
+                    <label for="storage">¿Dónde guardas la información diaria de tu negocio?</label>
+                    <input type="text" id="storage" name="storage" required>
+
+                    <label for="goals-group">¿Cuál de las siguientes opciones describe mejor tus objetivos? Podés seleccionar más de una opción.</label>
+                    <div class="checkbox-group" id="goals-group">
+                    <div class="checkbox">
+                        <input type="checkbox" id="goal1" name="goals[]" value="vender_mas">
+                        <label for="goal1">Quiero vender más</label>
+                    </div>
+                    
+                    <div class="checkbox">
+                        <input type="checkbox" id="goal2" name="goals[]" value="ordenar_empresa">
+                        <label for="goal2">Quiero ordenar mi empresa</label>
+                    </div>
+                    
+                    <div class="checkbox">
+                        <input type="checkbox" id="goal3" name="goals[]" value="saber_ganancias">
+                        <label for="goal3">Quiero saber si gano plata y cuánto exactamente</label>
+                    </div>
+                    
+                    <div class="checkbox">
+                        <input type="checkbox" id="goal4" name="goals[]" value="profesionalizar">
+                        <label for="goal4">Quiero profesionalizar mi empresa</label>
+                    </div>
+                    
+                    <div class="checkbox">
+                        <input type="checkbox" id="goal5" name="goals[]" value="digitalizar">
+                        <label for="goal5">Quiero digitalizar mi negocio</label>
+                    </div>
+                    
+                    <div class="checkbox">
+                        <input type="checkbox" id="goal6" name="goals[]" value="escalar">
+                        <label for="goal6">Quiero escalar mi negocio</label>
+                    </div>
+                    
+                    <div class="checkbox">
+                        <input type="checkbox" id="goal7" name="goals[]" value="ordenar_operacion">
+                        <label for="goal7">Quiero ordenar mi operación diaria</label>
+                    </div>
+                    
+                    <div class="checkbox checkbox-other">
+                        <label for="goal8">Otro</label>
+                        <input type="text" id="goal8" name="goalOther">
+                    </div>
+                    </div>
 
                     <button type="submit" class="btn btn-primary btn-checkout">Enviar</button>
                 </form>

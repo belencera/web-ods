@@ -10,7 +10,7 @@
     <!-- Estilos -->
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/pages/checkout.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@17.0.19/build/css/intlTelInput.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@17.0.19/build/css/intlTelInput.min.css" />
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="../assets/icons/favicon.ico">
@@ -45,26 +45,28 @@
                     <label>Dirección:</label>
                     <input type="text" id="address" name="address" required>
 
+                    <label>País:</label>
+                    <input type="text" id="country" name="country" required>
+
+                    <label>Provincia:</label>
+                    <input type="text" id="province" name="province" required>
+
                     <label>Ciudad:</label>
                     <input type="text" id="city" name="city" required>
 
                     <label>Código Postal:</label>
                     <input type="text" id="postalCode" name="postalCode" required>
 
-                    <label>Provincia:</label>
-                    <input type="text" id="province" name="province" required>
-                    
-                    <label>País:</label>
-                    <input type="text" id="country" name="country" required>
-
                     <div class="checkbox terms">
                         <input type="checkbox" id="terms" name="terms" required>
-                        <label for="terms">Acepto los <a href="../pages/terminos-condiciones.html">Términos y Condiciones</a></label>
+                        <label for="terms">Acepto los <a href="../pages/terminos-condiciones.html">Términos y
+                                Condiciones</a></label>
                     </div>
 
                     <div class="checkbox">
                         <input type="checkbox" id="extraCheck" name="extraCheck">
-                        <label for="extraCheck">Autorizo recibir comunicaciones e información relevante sobre servicios, novedades y actualizaciones</label>
+                        <label for="extraCheck">Autorizo recibir comunicaciones e información relevante sobre servicios,
+                            novedades y actualizaciones</label>
                     </div>
 
                     <button type="submit" class="btn btn-primary btn-checkout">Finalizar compra</button>

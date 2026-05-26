@@ -1,10 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Inicializar intl-tel-input
     const phoneInput = document.querySelector("#phone");
     const iti = window.intlTelInput(phoneInput, {
         initialCountry: "ar",
         preferredCountries: ["es", "ar"],
-        geoIpLookup: function (success, failure) {
+        geoIpLookup: function (success) {
             fetch("https://ipinfo.io/json?token=TU_TOKEN_IPINFO")
                 .then(resp => resp.json())
                 .then(resp => success(resp.country))
@@ -14,14 +13,36 @@ document.addEventListener("DOMContentLoaded", function () {
         separateDialCode: true
     });
 
-    // Capturar submit del formulario
+    function getSelectText(id) {
+        const select = document.getElementById(id);
+        return select.options[select.selectedIndex].text;
+    }
+
+    function getGoals() {
+        const goals = Array.from(
+            document.querySelectorAll('input[type="checkbox"][name="goals[]"]:checked')
+        ).map(cb => cb.value);
+
+        const goalOther = document.getElementById("goal8").value.trim();
+        if (goalOther) {
+            goals.push("Otro: " + goalOther);
+        }
+
+        return goals;
+    }
+
     const form = document.getElementById("aplicationForm");
     form.addEventListener("submit", async function (e) {
         e.preventDefault();
 
+        const goals = getGoals();
+        if (goals.length === 0) {
+            alert("Seleccioná al menos un objetivo.");
+            return;
+        }
+
         document.getElementById("loading").style.display = "block";
 
-        // Recoger datos del formulario
         const data = {
             fullName: document.getElementById("fullName").value.trim(),
             company: document.getElementById("company").value.trim(),
@@ -31,10 +52,21 @@ document.addEventListener("DOMContentLoaded", function () {
             rrss: document.getElementById("rrss").value.trim(),
             website: document.getElementById("website").value.trim(),
             location: document.getElementById("location").value.trim(),
+            products: getSelectText("products"),
+            description: document.getElementById("description").value.trim(),
+            year: document.getElementById("year").value.trim(),
+            channels: document.getElementById("channels").value.trim(),
+            employees: document.getElementById("employees").value.trim(),
+            income: getSelectText("income"),
+            expenses: getSelectText("expenses"),
+            margins: getSelectText("margins"),
+            clients: getSelectText("clients"),
+            tools: getSelectText("tools"),
+            storage: document.getElementById("storage").value.trim(),
+            goals,
         };
 
         try {
-            // Enviar datos al backend
             const res = await fetch("https://web-ods-api.onrender.com/api/aplication", {
                 method: "POST",
                 body: JSON.stringify(data),
@@ -49,7 +81,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 alert("¡Gracias! Tu solicitud fue enviada correctamente.");
                 form.reset();
             } else {
-                alert("Hubo un problema al enviar tu solicitud. Intenta nuevamente.");
+                alert(result.message || "Hubo un problema al enviar tu solicitud. Intenta nuevamente.");
             }
         } catch (err) {
             console.error(err);
