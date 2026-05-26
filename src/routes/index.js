@@ -16,6 +16,8 @@ router.use("/contact", require("./contact"));
 // Ruta para checkout de planes
 router.use("/checkout", require("./checkout"));
 
+// Ruta para formulario de aplicación
+router.use("/aplication", require("./aplication-form"));
 
 module.exports = router;
 

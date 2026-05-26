@@ -1,12 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Obtener el producto de la URL
-    const params = new URLSearchParams(window.location.search);
-    const product = params.get("product"); 
-
-    // Guardarlo en el input hidden
-    const productInput = document.getElementById("product");
-    if (productInput) productInput.value = product;
-
     // Inicializar intl-tel-input
     const phoneInput = document.querySelector("#phone");
     const iti = window.intlTelInput(phoneInput, {
@@ -23,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // Capturar submit del formulario
-    const form = document.getElementById("checkoutForm");
+    const form = document.getElementById("aplicationForm");
     form.addEventListener("submit", async function (e) {
         e.preventDefault();
 
@@ -31,23 +23,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Recoger datos del formulario
         const data = {
-            name: document.getElementById("name").value.trim(),
+            fullName: document.getElementById("fullName").value.trim(),
             company: document.getElementById("company").value.trim(),
+            rubric: document.getElementById("rubric").value.trim(),
             email: document.getElementById("email").value.trim(),
             phone: iti.getNumber(),
-            address: document.getElementById("address").value.trim(),
-            city: document.getElementById("city").value.trim(),
-            postalCode: document.getElementById("postalCode").value.trim(),
-            province: document.getElementById("province").value.trim(),
-            country: document.getElementById("country").value.trim(),
-            terms: document.getElementById("terms").checked,
-            extraCheck: document.getElementById("extraCheck").checked,
-            product 
+            rrss: document.getElementById("rrss").value.trim(),
+            website: document.getElementById("website").value.trim(),
+            location: document.getElementById("location").value.trim(),
         };
 
         try {
             // Enviar datos al backend
-            const res = await fetch("https://web-ods-api.onrender.com/api/checkout", {
+            const res = await fetch("https://web-ods-api.onrender.com/api/aplication", {
                 method: "POST",
                 body: JSON.stringify(data),
                 headers: {
@@ -57,16 +45,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
             const result = await res.json();
 
-            // Redirigir a Stripe
-            if (result.url) {
-                window.location.href = result.url;
+            if (res.ok && result.success) {
+                alert("¡Gracias! Tu solicitud fue enviada correctamente.");
+                form.reset();
             } else {
-                throw new Error("El servidor no devolvió la URL de Stripe.");
+                alert("Hubo un problema al enviar tu solicitud. Intenta nuevamente.");
             }
-
         } catch (err) {
             console.error(err);
-            alert("Hubo un error al procesar tu compra. Intenta nuevamente.");
+            alert("Hubo un error al procesar tu solicitud. Intenta nuevamente.");
+        } finally {
+            document.getElementById("loading").style.display = "none";
         }
     });
 });

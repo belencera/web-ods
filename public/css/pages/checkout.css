@@ -9,7 +9,7 @@
 /* ==================== FORMULARIO DE COMPRA ==================== */
 
 /* Formulario */
-#checkoutForm {
+.checkout-form {
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -20,7 +20,7 @@
 }
 
 /* Etiquetas (Labels) */
-#checkoutForm label {
+.checkout-form label {
     font-size: 1rem;
     font-weight: 500;
     margin-top: 5px;
@@ -28,9 +28,9 @@
 }
 
 /* Estilos de Campos de Texto y Área de Texto */
-#checkoutForm input[type="text"],
-#checkoutForm input[type="email"],
-#checkoutForm input[type="tel"] {
+.checkout-form input[type="text"],
+.checkout-form input[type="email"],
+.checkout-form input[type="tel"] {
     width: 100%;
     padding: 10px;
     border: none;
@@ -40,7 +40,7 @@
     font-size: 1rem;
 }
 
-#checkoutForm input[type="checkbox"] {
+.checkout-form input[type="checkbox"] {
     width: auto;
     margin: 0 10px;
 }
@@ -49,7 +49,7 @@
     margin-top: 20px;
 }
 /* Foco de los campos (Focus) */
-#checkoutForm input:focus {
+.checkout-form input:focus {
     outline: none;
     box-shadow: 0 0 5px var(--primary-color);
     border-color: var(--primary-color);
