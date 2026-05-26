@@ -25,10 +25,9 @@
     margin-bottom: 0;
 }
 
-/* Campos de texto, email, teléfono y número */
+/* Campos de texto, email y número */
 .aplication-form input[type="text"],
 .aplication-form input[type="email"],
-.aplication-form input[type="tel"],
 .aplication-form input[type="number"] {
     width: 100%;
     padding: 10px;
@@ -141,8 +140,23 @@
 }
 
 /* intl-tel-input */
-.aplication-form #phone {
-    padding-left: 52px !important;
+.aplication-form .iti {
+    width: 100%;
+}
+
+.aplication-form .iti input[type="tel"] {
+    width: 100%;
+    padding: 10px 10px 10px 96px;
+    border: none;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    font-size: 1rem;
+}
+
+.aplication-form .iti input[type="tel"]:focus {
+    outline: none;
+    box-shadow: 0 0 5px var(--primary-color);
 }
 
 /* Botón enviar */

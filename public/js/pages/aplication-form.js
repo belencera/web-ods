@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
             company: document.getElementById("company").value.trim(),
             rubric: document.getElementById("rubric").value.trim(),
             email: document.getElementById("email").value.trim(),
-            phone: iti.getNumber(),
+            phone: iti.getNumber() || document.getElementById("phone").value.trim(),
             rrss: document.getElementById("rrss").value.trim(),
             website: document.getElementById("website").value.trim(),
             location: document.getElementById("location").value.trim(),
@@ -85,6 +85,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         } catch (err) {
             console.error(err);
+            console.error("Payload enviado:", data);
             alert("Hubo un error al procesar tu solicitud. Intenta nuevamente.");
         } finally {
             document.getElementById("loading").style.display = "none";

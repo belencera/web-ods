@@ -33,7 +33,7 @@ const sendAplicationToSheet = async (req, res) => {
         if (missing.length > 0) {
             return res.status(400).json({
                 success: false,
-                message: "Faltan campos obligatorios.",
+                message: `Faltan campos obligatorios: ${missing.join(", ")}`,
             });
         }
 
