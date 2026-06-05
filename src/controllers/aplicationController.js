@@ -20,6 +20,7 @@ const REQUIRED_FIELDS = [
     "clients",
     "tools",
     "storage",
+    "terms",
 ];
 
 const sendAplicationToSheet = async (req, res) => {

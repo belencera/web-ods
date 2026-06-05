@@ -64,6 +64,8 @@ document.addEventListener("DOMContentLoaded", function () {
             tools: getSelectText("tools"),
             storage: document.getElementById("storage").value.trim(),
             goals,
+            terms: document.getElementById("terms").checked,
+            communications: document.getElementById("communications").checked,
         };
 
         try {
@@ -78,8 +80,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const result = await res.json();
 
             if (res.ok && result.success) {
-                alert("¡Gracias! Tu solicitud fue enviada correctamente.");
-                form.reset();
+                window.location.href = "../pages/thanks.html";
             } else {
                 alert(result.message || "Hubo un problema al enviar tu solicitud. Intenta nuevamente.");
             }
