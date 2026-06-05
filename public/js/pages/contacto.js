@@ -80,6 +80,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const result = await res.json();
 
         if (result.success) {
+          fbq('track', 'Contact');
           alert("¡Gracias! Tu mensaje fue enviado correctamente.");
           form.reset();
         } else {

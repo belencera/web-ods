@@ -80,6 +80,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const result = await res.json();
 
             if (res.ok && result.success) {
+                fbq('track', 'CompleteRegistration');
                 window.location.href = "../pages/thanks.html";
             } else {
                 alert(result.message || "Hubo un problema al enviar tu solicitud. Intenta nuevamente.");

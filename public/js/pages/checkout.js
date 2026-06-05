@@ -59,6 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             // Redirigir a Stripe
             if (result.url) {
+                fbq('track', 'Purchase');
                 window.location.href = result.url;
             } else {
                 throw new Error("El servidor no devolvió la URL de Stripe.");
