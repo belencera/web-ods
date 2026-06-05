@@ -24,4 +24,6 @@ jobs:
         
         local-dir: ./public/               # <-- Sube solo lo que esté dentro de 'public'
         server-dir: ./                     # <-- Lo suelta directo en la raíz donde conecta tu FTP
+
+        security: loose                     # <-- Permite conexiones sin TLS
         
