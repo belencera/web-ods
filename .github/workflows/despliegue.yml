@@ -19,9 +19,9 @@ jobs:
         server: ${{ secrets.FTP_SERVER }}
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
+        port: 21                           # <-- Forzamos el puerto estándar FTP para evitar el timeout
+        protocol: ftp                      # <-- Especificamos el protocolo limpio
         
-        local-dir: ./public/ # Ruta local de los archivos a subir 
-        server-dir: ./ # Ruta de destino en el servidor 
-
-        dangerous-clean-html: false # Evita que borre configuraciones internas del servidor
-        delete: true # Elimina archivos en el servidor que no estén en el local
+        local-dir: ./public/               # <-- Sube solo lo que esté dentro de 'public'
+        server-dir: ./                     # <-- Lo suelta directo en la raíz donde conecta tu FTP
+        
