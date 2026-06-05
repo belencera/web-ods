@@ -20,5 +20,8 @@ jobs:
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
         
-        local-dir: ./public/ 
-        server-dir: ./public_html/
+        local-dir: ./public/ # Ruta local de los archivos a subir 
+        server-dir: ./ # Ruta de destino en el servidor 
+
+        dangerous-clean-html: false # Evita que borre configuraciones internas del servidor
+        delete: true # Elimina archivos en el servidor que no estén en el local
